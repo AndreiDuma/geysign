@@ -1,5 +1,5 @@
 from gi.repository import Gtk
-from SignKeysPages import KeyListPage, FingerprintCheckPage
+from SignKeysPages import KeyListPage, FingerprintCheckPage, IdentityCheckPage, PostSignPage
 
 FINGERPRINT_SAMPLE = '22A3 0C2C 21CA 3580 D478\n2E06 B2FA 08EC DC37 8D64'
 
@@ -11,8 +11,10 @@ class SignKeysSection(Gtk.VBox):
         # setup the notebook
         self.notebook = Gtk.Notebook()
         self.notebook.append_page(KeyListPage(), None)
-        self.notebook.append_page(FingerprintCheckPage(), None)
-        # TODO add other pages
+        #self.notebook.append_page(FingerprintCheckPage(), None)
+        #self.notebook.append_page(IdentityCheckPage(), None)
+        #self.notebook.append_page(PostSignPage(), None)
+        # TODO make the notebook change between these pages
 
         self.notebook.set_show_tabs(False)
 
